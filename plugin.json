@@ -1,11 +1,11 @@
 {
-	"id": "nodebb-plugin-reddit",
-	"name": "NodeBB Reddit Plugin",
-	"description": "NodeBB Plugin that will create links to subreddits in /r/ notation.",
-	"url": "https://github.com/Schamper/nodebb-plugin-reddit",
-	"library": "./library.js",
-	"hooks": [
-		{ "hook": "filter:parse.post", "method": "parsePost", "priority": 6 },
-      	{ "hook": "filter:parse.raw", "method": "parseRaw", "priority": 6 }
-	]
+  "id": "nodebb-plugin-reddit",
+  "name": "NodeBB Reddit Plugin",
+  "description": "NodeBB Plugin that will create links to subreddits in /r/ notation.",
+  "url": "https://github.com/Schamper/nodebb-plugin-reddit",
+  "library": "./library.js",
+  "hooks": [
+    { "hook": "filter:parse.post", "method": "parsePost", "priority": 6 },
+    { "hook": "filter:parse.raw", "method": "parseRaw", "priority": 6 }
+  ]
 }

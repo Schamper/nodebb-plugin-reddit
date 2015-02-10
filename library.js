@@ -6,23 +6,23 @@
 	Reddit.parsePost = function(data, callback) {
 		var postContent = data && data.postData && data.postData.content;
 
-        data.postData.content = parse(postContent);
+		data.postData.content = parse(postContent);
 
 		callback(null, data);
 	};
 
-    Reddit.parseRaw = function(raw, callback) {
-        callback(null, parse(raw));
-    };
+	Reddit.parseRaw = function(raw, callback) {
+		callback(null, parse(raw));
+	};
 
-    function parse(text) {
-        var	regex = /\B(\/[ru]\/\w+)/g;
+	function parse(text) {
+		var	regex = /\B(\/[ru]\/\w+)/g;
 
-        if (text && text.match(regex)) {
-            return text.replace(regex, anchor);
-        } else {
-            return text;
-        }
-    }
+		if (text && text.match(regex)) {
+			return text.replace(regex, anchor);
+		} else {
+			return text;
+		}
+	}
 
 }(module.exports));
